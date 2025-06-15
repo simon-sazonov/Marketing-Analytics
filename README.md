@@ -6,9 +6,9 @@
 
 | Name           | Student ID | UNIMIB Email              |
 |----------------|------------|---------------------------|
-| Semen Sazonov  | 934361     | [your_email@campus.unimib.it] |
-| Junaid Ahmed   | 923714     | [your_email@campus.unimib.it] |
-| Hadis Forghani | 920040     | [your_email@campus.unimib.it] |
+| Semen Sazonov  | 934361     | [s.sazonov@campus.unimib.it] |
+| Junaid Ahmed   | 923714     | [j.ahmed6@campus.unimib.it] |
+| Hadis Forghani | 920040     | [H.forghani@campus.unimib.it] |
 
 ---
 
@@ -64,13 +64,24 @@ The following execution order must be followed:
 
 ## Setup Instructions
 
-### Environment Setup (PDM + Conda)
-
-```bash
-# Create and activate environment
+### Create Conda environment (only once)
 conda create -n snowit_env python=3.10
 conda activate snowit_env
 
-# Install PDM and dependencies
+### Install PDM
 pip install pdm
-pdm install
+
+### Clone the project and navigate inside
+cd Marketing-Analytics
+
+### Initialize PDM (only once)
+pdm init
+
+### Install dependencies
+pdm add dill pandas numpy matplotlib seaborn scikit-learn nltk
+
+### (Optional) Install Jupyter
+pdm add jupyter
+
+### Download NLTK data (only once)
+pdm run python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet')"
