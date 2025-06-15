@@ -1,27 +1,28 @@
 [project]
-name = "unimib_snowit_project"
+name = "Marketing-Analytics"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "gcollini", email = "giovanni.collini@unimib.it"},
+    {name = "Semen Sazonov", email = "s.sazonov@campus.unimib.it"},
 ]
 dependencies = [
-    "pandas>=2.2.3",
-    "numpy>=2.2.5",
+    "pandas>=2.3.0",
+    "numpy>=2.2.6",
     "ipykernel>=6.29.5",
     "jupyter>=1.1.1",
-    "dill>=0.4.0"
+    "dill>=0.4.0",
+    "notebook>=7.4.3",
+    "matplotlib>=3.10.3",
+    "seaborn>=0.13.2",
+    "scikit-learn>=1.7.0",
+    "nltk>=3.9.1",
 ]
-requires-python = "==3.12.*"
+requires-python = "==3.10.*"
 readme = "README.md"
 license = {text = "MIT"}
 
 
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
-
 [tool.pdm]
-distribution = true
+distribution = false
 
